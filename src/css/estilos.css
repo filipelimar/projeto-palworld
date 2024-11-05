@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+body {
+      font-family: "Poppins", sans-serif;
+      background-image: url("../imagens/palworld.jpeg");
+      background-size: cover;
+
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  backdrop-filter: blur(8px);
+
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+
+.paldevs {
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+
+}
+
+.cartao-paldev {
+  display: none;
+  max-width: 460px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.cartao-paldev.aberto {
+  display: block;
+}
+
+
+
+.cartao-paldev .cartao-topo {
+  background-color: #fcc719;
+  padding: 30px 40px 0;
+}
+
+.cartao-paldev .nome {
+  margin-bottom: 5px;
+  
+}
+
+.cartao-paldev .tipo {
+  background-color: #ffffff;
+  font-size: 12px;
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 2px 10px;
+  
+}
+
+.cartao-paldev .detalhes {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartao-paldev .cartao-informacoes {
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  padding: 80px 30px 50px;
+  margin-top: -70px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cartao-paldev .cartao-informacoes h3{
+  font-size:  20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #6b727a;
+
+}
+
+.cartao-paldev .cartao-informacoes .descricao {
+  padding: 0 10px;
+  font-size: 15px;
+  max-height: 170px;
+  overflow-y: scroll;
+  }
+
+  .tipo-eletrico {
+    background-color: #fcc719;
+    
+  }
+  .tipo-fogo {
+    background-color: orange;
+  }
+
+  .tipo-gelo {
+    background-color: aqua;
+  }
+
+  .tipo-neutro {
+    background-color: #6b727a;
+  }
+
+.listagem {
+  max-width: 250px;
+  max-height: 650px;
+  overflow-y: scroll;
+
+}
+
+.listagem .paldev img {
+  width: 25%;
+  margin-left: 15px;
+}
+
+.listagem .paldev {
+  background-color: #6b727a;
+  color: #ffffff;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  min-height: 40px;
+  transition: 0.20 ease-in-out;
+  
+}
+
+.listagem .paldev:hover {
+  transform: scale(1.10);
+}
+
+.listagem .paldev span {
+  padding-right: 20px;
+}
+
+.listagem .paldev.ativo {
+  background-color: #fa6668;
+
+}
